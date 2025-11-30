@@ -38,9 +38,9 @@ section nav {
 }
 
 section nav .logo img {
-    width: 100px;
+    width: 85px;
+    height: 80px;
     cursor: pointer;
-    border-radius: 50%;
 }
 
 section nav ul {
@@ -141,7 +141,7 @@ section .main_btn {
     display: inline-block;
     text-align: center;
     margin-top: 5%;
-    margin-left: 30%;
+    margin-left: 20%;
 }
 
 section .main_btn a {
