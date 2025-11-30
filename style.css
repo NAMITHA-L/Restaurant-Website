@@ -40,7 +40,7 @@ section nav {
 section nav .logo img {
     width: 100px;
     cursor: pointer;
-    margin: 7px 0;
+    border-radius: 50%;
 }
 
 section nav ul {
