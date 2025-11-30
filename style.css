@@ -1,0 +1,630 @@
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global Image Reset for Responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= NAVIGATION ================= */
+section nav {
+    display: flex;
+    justify-content: space-between; /* Changed from space-around for better spacing */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    height: 90px;
+    padding: 0 5%; /* Adds breathing room on sides */
+}
+
+section nav .logo img {
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+
+section nav ul {
+    list-style: none;
+    display: flex; /* Ensure horizontal layout */
+}
+
+section nav ul li {
+    margin: 0 15px;
+}
+
+section nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+    position: relative;
+}
+
+section nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: rgb(206, 0, 0);
+    display: block;
+    transition: 0.3s; /* Added transition for smooth underline */
+}
+
+section nav ul li a:hover::after {
+    width: 100%;
+}
+
+section nav ul li a:hover {
+    color: rgb(206, 0, 0);
+}
+
+section nav .icon i {
+    font-size: 18px;
+    color: black;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+section nav .icon i:hover {
+    color: rgb(206, 0, 0);
+}
+
+/* ================= HERO SECTION ================= */
+section {
+    width: 100%;
+    min-height: 100vh; /* Allow growth if content is long */
+    padding-top: 90px; /* Offset for fixed header */
+}
+
+section .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Distribute space evenly */
+    flex-wrap: wrap; /* Key for responsiveness */
+    padding: 20px 5%;
+    gap: 30px; /* Space between text and image */
+    margin-top: 50px;
+}
+
+section .main .men_text {
+    flex: 1 1 400px; /* Grow, Shrink, Basis */
+    max-width: 650px;
+}
+
+section .main .men_text h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 1px;
+}
+
+section .main .men_text h1 span {
+    color: rgb(206, 0, 0);
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+    margin-left: 15px;
+}
+
+section .main .men_text p {
+    text-align: justify;
+    line-height: 22px;
+    margin-top: 40px;
+}
+
+section .main_btn {
+    background: rgb(206, 0, 0);
+    width: 200px;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 30%;
+}
+
+section .main_btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section .main_btn i {
+    color: white;
+    transition: 0.3s;
+    margin-left: 5px;
+}
+
+section .main_btn:hover i {
+    transform: translateX(7px);
+}
+
+section .main_btn:hover {
+    background: rgb(150, 0, 0);
+}
+
+section .main .main_image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .main .main_image img {
+    width: 100%;
+    max-width: 500px; /* Prevent it getting too huge */
+}
+
+/* ================= ABOUT SECTION ================= */
+.about {
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 5%;
+}
+
+/* Heading centered at top */
+.about_heading {
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 50px;
+}
+
+.about_heading span {
+    color: rgb(206, 0, 0);
+    margin-right: 10px;
+    font-family: mv boli;
+}
+
+/* Flex container for image + text */
+.about_main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Left Half: Image */
+.about_left {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_left img {
+    max-width: 100%;
+    border-radius: 10%;
+}
+
+/* Right Half: Text */
+.about_right {
+    flex: 1 1 500px;
+    max-width: 600px;
+}
+
+.about_right h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.about_right p {
+    text-align: justify;
+    line-height: 22px;
+    margin-bottom: 40px;
+}
+
+.about_btn {
+    background: rgb(206, 0, 0);
+    padding: 10px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.3s;
+    margin-left: 30%;
+}
+
+.about_btn:hover {
+    background: rgb(150, 0, 0);
+}
+
+
+/* ================= MENU SECTION ================= */
+.menu {
+    width: 100%;
+    padding: 7px 0;
+}
+
+.menu h1 {
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3%;
+    margin-top: 0%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.menu h1 span {
+    color: rgb(206, 0, 0);
+    margin: 0 1%;
+    font-family: mv boli;
+}
+
+.menu h1 span::after {
+    content: none; /* User requested removal in original code */
+}
+
+.menu .menu_box {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Fluid Grid */
+    grid-gap: 30px;
+    padding: 0 5%;
+}
+
+.menu .menu_box .menu_card {
+    width: 100%;
+    background: white;
+    height: 480px;
+    padding-top: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+    border-radius: 5px; /* Added optional subtle radius */
+}
+
+.menu .menu_box .menu_card .menu_image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img {
+    transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small_card {
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -205px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+    background: white; /* Ensure icons are visible */
+}
+
+.menu .menu_box .menu_card:hover .small_card {
+    right: 20px;
+    opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card i {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 45px;
+    color: black;
+    cursor: pointer;
+    text-shadow: 0 0 6px rgb(255, 105, 105);
+    transition: 0.2s;
+}
+
+.menu .menu_box .menu_card .small_card i:hover {
+    color: rgb(255, 2, 2);
+}
+
+.menu .menu_box .menu_card .menu_info h2 {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 25px;
+    color: rgb(206, 0, 0);
+}
+
+.menu .menu_box .menu_card .menu_info h3 {
+    margin-top: 10px;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_icon {
+    color: rgb(206, 0, 0);
+    margin: 10px 0 20px 0;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(251, 248, 248);
+    background: black;
+    padding: 8px 20px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+/* ================= REVIEW SECTION ================= */
+.review {
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 0;
+}
+
+.review h1 {
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.review h1 span {
+    color: rgb(206, 0, 0);
+    margin: 0 15px;
+    font-family: mv boli;
+}
+
+.review .review_box {
+    width: 100%;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 30px;
+    padding: 0 5%;
+}
+
+.review .review_box .review_card {
+    width: 100%;
+    height: auto; /* Changed to auto to fit content */
+    min-height: 350px;
+    box-shadow: 0 2px 8px black;
+    border-radius: 8px;
+    padding: 20px;
+    background: white;
+}
+
+.review .review_box .review_card .review_profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.review .review_box .review_card .review_profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e5e5e5;
+}
+
+.review .review_box .review_card:hover .review_profile {
+    transform: translateY(-10px); /* Reduced movement for safety */
+}
+
+.review .review_box .review_card .review_text {
+    text-align: center;
+}
+
+.review .review_box .review_card .review_text .name {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card .review_text .review_icon {
+    color: rgb(206, 0, 0);
+    transition: 0.3s;
+    margin: 5px 0;
+}
+
+.review .review_box .review_card .review_text .review_social i {
+    margin: 5px 2px;
+    font-size: 15px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card .review_text p {
+    text-align: center;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+/* ================= ORDER SECTION ================= */
+.order {
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 0;
+    background-image: url(image/bg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.order::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+}
+
+.order h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 55px;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.order h1 span {
+    color: rgb(206, 0, 0);
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.order .order_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Stacks form and image */
+    padding: 20px 5%;
+    gap: 40px;
+}
+
+.order .order_main .order_image {
+    flex: 1 1 400px; /* Responsive sizing */
+}
+
+.order .order_main .order_image img {
+    width: 100%;
+    border-radius: 40px;
+}
+
+.order .order_main form {
+    flex: 1 1 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    background: rgba(255, 255, 255, 0.8); /* Optional: makes form readable over bg */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.order .order_main form .input p {
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.order .order_main form .input input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 4px;
+}
+
+.order .order_main form .input input:focus {
+    border: 2px solid rgb(206, 0, 0);
+}
+
+.order .order_main form .order_btn {
+    grid-column: span 2;
+    background: rgb(206, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.order .order_main form .order_btn:hover {
+    background: rgb(150, 0, 0);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: rgb(206, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* ================= MEDIA QUERIES (ADJUSTMENTS) ================= */
+
+/* Tablet & Mobile */
+@media (max-width: 850px) {
+    /* Hide the desktop menu link list, assume a hamburger icon logic exists or user handles it */
+    section nav ul {
+        display: none; 
+    }
+    
+    section nav .icon {
+        display: block;
+    }
+    
+    section .main .men_text h1 {
+        font-size: 40px;
+    }
+    
+    section .main .men_text h1 span {
+        font-size: 50px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    section nav {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    section .main .men_text h1 {
+        font-size: 30px;
+    }
+    
+    section .main .men_text h1 span {
+        font-size: 40px;
+    }
+    
+    .menu h1, .review h1, .order h1 {
+        font-size: 30px;
+    }
+    
+    /* Make order form single column on small screens */
+    .order .order_main form {
+        grid-template-columns: 1fr;
+    }
+    
+    .order .order_main form .order_btn {
+        grid-column: span 1;
+    }
+}
